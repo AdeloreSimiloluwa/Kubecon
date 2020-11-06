@@ -1,0 +1,18 @@
+name: DocumentType Processor
+description: checking for document type
+inputs:
+- {name: Input_data, type: GCSpath}
+outputs:
+- {name: Output_data, type: GCSpath}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/doctype_preprocessor:latest
+    command:
+    args: [
+      --input_data, {inputPath: input_data},
+      --output_data, {outputPath: output_data}
+    ]
+	
+	
+	
+	

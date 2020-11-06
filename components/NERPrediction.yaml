@@ -1,0 +1,17 @@
+name: NERPrediction
+description: pREDICTIONS FOR THE NERModel
+inputs:
+- {name: model_path, type: NERModel}
+outputs:
+- {name: model_accuracy, type: integer}
+- {name: predictions, type: json}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/ner_prediction:latest
+    command:
+    args: [
+	  --model_path, {inputValue: model_path},
+	  --model_accuracy, {outputValue: model_accuracy},
+      --predictions, {outputValue: predictions}	  
+	]
+    

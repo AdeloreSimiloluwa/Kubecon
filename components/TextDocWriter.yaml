@@ -1,0 +1,19 @@
+name: TextDocWriter
+description: collects data from Writing Document to Text
+inputs:
+- {name: Input_data, type: GCSpath}
+outputs:
+- {name: labels, type: String}
+- {name: content, type: String}
+- {name: document_name, type: String}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/text_doc_writer:latest
+    command:
+    args: [
+      --input_data, {inputPath: input_data},
+      --labels, {outputValue: labels},
+	  --content, {outputValue: content},
+	  --document_name, {outputValue: document_name}
+    ]
+	

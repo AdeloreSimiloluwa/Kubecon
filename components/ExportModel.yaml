@@ -1,0 +1,14 @@
+name: ExportModel
+description: Model is converted and exported as an ONNXModel
+inputs:
+- {name: model_path, type: LogisticClassification}
+outputs:
+- {name: exported_model_path, type: ONNXModel}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/export_model:latest
+    command:
+    args: [
+      --model_path, {inputPath: model_path},
+	  --exported_model_path, {outputPath: exported_model_path}
+    ]

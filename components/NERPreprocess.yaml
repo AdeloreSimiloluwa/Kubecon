@@ -1,0 +1,14 @@
+name: NERPreprocess
+description: the data is cleaned and transformed into spacy format for the model training
+inputs:
+- {name: input_data, type: json}
+outputs:
+- {name: spacy_format, type: json}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/preprocess:latest
+    command:
+    args: [
+      --input_data, {inputValue: input_data},
+	  --spacy_format, {outputValue: dataframe}
+    ]

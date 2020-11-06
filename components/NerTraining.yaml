@@ -1,0 +1,14 @@
+name: NERTraining
+description: the ner model is built and the model is trained and saved
+inputs:
+- {name: spacy_format, type: json}
+outputs:
+- {name: model_path, type: NERModel}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/ner_training:latest
+    command:
+    args: [
+      --spacy_format, {inputValue: dataframe},
+	  --model_path, {outputPath: model_path}
+    ]

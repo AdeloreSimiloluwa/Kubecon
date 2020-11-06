@@ -1,0 +1,19 @@
+name: TextDocWriter
+description: Writing Document to Text
+inputs:
+- {name: Directory, type: Directory}
+outputs:
+- {name: Items}
+implementation:
+  container:
+    image: alpine
+    command:
+    - sh
+    - -ex
+    - -c
+    - |
+      mkdir -p "$(dirname "$1")"
+      #ls --almost-all --recursive "$0" > "$1"
+      ls -A -R "$0" > "$1"
+    - inputPath: Directory
+    - outputPath: Items
