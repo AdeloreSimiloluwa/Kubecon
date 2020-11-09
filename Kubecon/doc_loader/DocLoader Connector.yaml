@@ -12,5 +12,5 @@ implementation:
       python3, /pipelines/component/src/docloader.py,
       --data,                        {inputValue: data},
       --outputdata,                      {inputValue: outputdata},
-      --output_path_file,                      {outputPath: outputdata}
+      --output-path-file,                      {outputPath: outputdata}
     ]
