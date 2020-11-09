@@ -11,7 +11,6 @@ def doctype_processor(argv=None):
   parser.add_argument('--vectorized', type=str, help='')
   parser.add_argument('--image', type=str, help='')
   parser.add_argument('--worddoc', type=str, help='')
-  parser.add_argument('--output_dir', type=str, help='')
   parser.add_argument('--output-path-file', help='')
   known_args, pipeline_args = parser.parse_known_args(argv)
   args = parser.parse_args()
