@@ -2,6 +2,7 @@ name: DocLoader Connector
 description: collecting the data from storage
 inputs:
 - {name: data, type: GCSpath}
+- {name: outputdata, type: GCSpath}
 outputs:
 - {name: outputdata, type: GCSpath}
 implementation:
