@@ -10,7 +10,7 @@ implementation:
     image: gcr.io/mlops-kubeflow-00/prediction:latest
     command:
     args: [
-	  --exported_model_path, {inputPath: exported_model_path},
+      --exported_model_path, {inputPath: exported_model_path},
       --model_accuracy, {outputValue: model_accuracy},
-	  --predictions, {outputValue: predictions}
+      --predictions, {outputValue: predictions}
     ]
