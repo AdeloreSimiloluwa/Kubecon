@@ -1,6 +1,14 @@
 name: DocLoader Connector
 description: collecting the data from storage
+inputs:
+- {name: data, type: GCSpath}
+outputs:
+- {name: outputdata, type: GCSpath}
 implementation:
   container:
     image: gcr.io/mlops-kubeflow-00/docloader_connector:latest
-    command: [python3, /pipelines/component/src/docloader.py]
+    command: [
+      python3, /pipelines/component/src/docloader.py,
+      --data,                        {inputValue: data},
+      --outputdata,                      {inputValue: data}
+    ]
