@@ -10,5 +10,5 @@ implementation:
     command: [
       python3, /pipelines/component/src/docloader.py,
       --data,                        {inputValue: data},
-      --outputdata,                      {inputValue: data}
+      --outputdata,                      {outputPath: outputdata}
     ]
