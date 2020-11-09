@@ -3,4 +3,4 @@ description: checking for document type
 implementation:
   container:
     image: gcr.io/mlops-kubeflow-00/doctype_processor:latest
-    command: [python3, /pipelines/component/src/doctype_preprocessor.py]
+    command: [python3, /pipelines/component/src/doctype_processor.py]
