@@ -5,7 +5,7 @@ import logging
 
 def doctype_processor() -> str:
   return "Hello Word"
-  
-if __name__ == '__main__':
-  logging.getLogger().setLevel(logging.INFO)
-  doctype_processor()
+
+def print_small_text(text: str):
+    '''Print small text'''
+    print(text)
