@@ -3,4 +3,4 @@ description: collecting the data from storage
 implementation:
   container:
     image: gcr.io/mlops-kubeflow-00/docloader_connector:latest
-    command:[python3, /pipelines/component/src/docloader.py]
+    command: [python3, /pipelines/component/src/docloader.py]
