@@ -12,7 +12,7 @@ implementation:
     command: [
       python3, /pipelines/component/src/doctype_processor.py,
       --outputdata,                        {inputValue: outputdata},
-      --vectorized,                      {inputValue: vectorized},
-      --image,                      {inputValue: image},
-      --worddoc,                      {inputValue: worddoc} 
+      --vectorized,                      {outputPath: vectorized},
+      --image,                      {outputPath: image},
+      --worddoc,                      {outputPath: worddoc} 
     ]
