@@ -1,6 +1,18 @@
 name: DocumentType Processor
 description: checking for document type
+inputs:
+- {name: outputdata, type: GCSpath}
+outputs:
+- {name: vectorized, type: GCSpath}
+- {name: image, type: GCSpath}
+- {name: worddoc, type: GCSpath}
 implementation:
   container:
     image: gcr.io/mlops-kubeflow-00/doctype_processor:latest
-    command: [python3, /pipelines/component/src/doctype_processor.py]
+    command: [
+      python3, /pipelines/component/src/doctype_processor.py,
+      --outputdata,                        {inputValue: outputdata},
+      --vectorized,                      {inputValue: vectorized},
+      --image,                      {inputValue: image},
+      --worddoc,                      {inputValue: worddoc} 
+    ]
