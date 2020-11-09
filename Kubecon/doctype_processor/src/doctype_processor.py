@@ -14,11 +14,10 @@ def doctype_processor(argv=None):
   parser.add_argument('--output-path-file', help='')
   known_args, pipeline_args = parser.parse_known_args(argv)
   args = parser.parse_args()
-
-  a = "hello world"
-  b = "hello world"
-  c = "hello world"
-  d = "hello world"
+  
+  a = known_args.vectorized
+  b = known_args.worddoc
+  c = known_args.image
   
   print(a,b,c,d)
   
