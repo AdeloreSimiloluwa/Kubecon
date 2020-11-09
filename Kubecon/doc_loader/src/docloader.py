@@ -7,8 +7,7 @@ from pathlib import Path
 
 # Defining and parsing the command-line arguments
 parser = argparse.ArgumentParser(description='My program description')
-parser.add_argument('--data', type=str ,  help= '',
-                    help='Path of the local file or GCS blob containing the Input 1 data.')
+parser.add_argument('--data', type=str,help='Path of the local file or GCS blob containing the Input 1 data.')
 
 parser.add_argument('--outputdata', type=str ,  help= '')
 parser.add_argument('--output-path-file', help='')
