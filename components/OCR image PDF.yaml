@@ -1,0 +1,12 @@
+name: OCR image PDF
+description: ocr for imagepdf is done here
+inputs:
+- {name: image, type: data}
+outputs:
+- {name: textdata}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/ocr_image_pdf:latest
+    command:
+    - inputPath: image
+    - outputPath: textdata

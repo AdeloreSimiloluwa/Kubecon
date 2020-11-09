@@ -1,0 +1,12 @@
+name: WordDoc
+description: ocr for word documents is done here
+inputs:
+- {name: word, type: data}
+outputs:
+- {name: textdata}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/vectorized_pdf:latest
+    command:
+    - inputPath: word
+    - outputPath: textdata

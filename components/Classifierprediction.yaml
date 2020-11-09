@@ -1,0 +1,14 @@
+name: ClassifierPrediction
+description: Predictions from the Logistic Classification model 
+inputs:
+- {name: exported_model_path, type: ONNXModel}
+outputs:
+- {name: model_accuracy, type: integer}
+- {name: predictions, type: dataframe}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/prediction:latest
+    command:
+    - inputPath: exported_model_path
+    - outputPath: model_accuracy
+    - outputPath: predictions

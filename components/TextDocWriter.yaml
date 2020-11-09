@@ -1,0 +1,18 @@
+name: TextDocWriter
+description: collects data from Writing Document to Text
+inputs:
+- {name: textdata, type: data}
+outputs:
+- {name: labels}
+- {name: content}
+- {name: document_name}
+- {name: text_files}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/text_doc_writer:latest
+    command:
+    - inputPath: textdata
+    - outputPath: labels
+    - outputPath: content
+    - outputPath: document_name
+    - outputPath: text_files

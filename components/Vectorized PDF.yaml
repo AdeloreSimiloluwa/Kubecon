@@ -1,0 +1,12 @@
+name: VectorizedPDF
+description: ocr for vectorizedpdf is done here
+inputs:
+- {name: vectorized, type: data}
+outputs:
+- {name: textdata}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/vectorized_pdf:latest
+    command:
+    - inputPath: vectorized
+    - outputPath: textdata

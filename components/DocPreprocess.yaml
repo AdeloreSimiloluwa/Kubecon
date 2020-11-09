@@ -1,0 +1,16 @@
+name: Preprocess
+description: the data is cleaned and transformed for the model training
+inputs:
+- {name: labels, type: String}
+- {name: content, type: String}
+- {name: document_name, type: String}
+outputs:
+- {name: dataframe}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/preprocess:latest
+    command:
+    - inputPath: labels
+    - inputPath: content
+    - inputPath: document_name
+    - outputPath: dataframe

@@ -1,0 +1,16 @@
+name: DocumentType Processor
+description: checking for document type
+inputs:
+- {name: outputdatadata, type: data}
+outputs:
+- {name: vectorized, type: data}
+- {name: word, type: data}
+- {name: image, type: data}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/doctype_preprocessor:latest
+    command:
+    - {inputPath: outputdata}
+    - {outputPath: vectorized}
+    - {outputPath: word}
+    - {outputPath: image}

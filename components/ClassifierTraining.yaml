@@ -1,0 +1,12 @@
+name: ClassifierTraining 
+description: the classifier is built and the model is trained and saved
+inputs:
+- {name: dataframe, type: dataframe}
+outputs:
+- {name: model_path, type: LogisticClassification}
+implementation:
+  container:
+    image: gcr.io/mlops-kubeflow-00/training:latest
+    command:
+    - inputPath: dataframe
+    - outputPath: model_path
