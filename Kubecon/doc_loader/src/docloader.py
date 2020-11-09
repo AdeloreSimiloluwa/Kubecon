@@ -11,7 +11,7 @@ parser.add_argument('--data', type=str,
 parser.add_argument('--outputdata', type=str, help='')
 args = parser.parse_args()
 
-data = pd.read_csv("https://raw.githubusercontent.com/AdeloreSimiloluwa/Kubecon/new/Kubecon/data/data.csv")
-outputdata = pd.read_csv('https://raw.githubusercontent.com/AdeloreSimiloluwa/Kubecon/new/Kubecon/data/outputdata.csv')
+data = pd.read_csv("https://raw.githubusercontent.com/AdeloreSimiloluwa/Kubecon/86a4b712940a8e1296fc7156b62c07cff3a2c0ee/Kubecon/data/data.txt")
+outputdata = pd.read_csv('https://raw.githubusercontent.com/AdeloreSimiloluwa/Kubecon/48f1681a89282870dfbdad926a3210877e22d1a8/Kubecon/data/outputdata.txt')
 logger = logger or logging.getLogger('The data has successfully downloded')
 print(logger)
