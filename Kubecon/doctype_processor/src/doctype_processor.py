@@ -1,11 +1,7 @@
-import os
-import pandas as pd
-import argparse
-import logging  
+import logging
 
-def produce_one_small_output() -> str:
-  return "Hello Word"
-
-def print_small_text(text: str):
-    '''Print small text'''
-    print(text)
+def doctype_process_op(a) -> str:
+    return a
+	
+logger = logging.getLogger('some files were skipped')
+print(logger)
