@@ -11,8 +11,9 @@ parser.add_argument('--data', type=str,help='Path of the local file or GCS blob 
 
 parser.add_argument('--outputdata', type=str ,  help= '')
 parser.add_argument('--output-path-file', help='')
+known_args, pipeline_args = parser.parse_known_args(argv)
 args = parser.parse_args()
-print(os.path.dirname(args.outputdata))
+# print(os.path.dirname(args.outputdata))
 
 print(args.data)
 print(args.outputdata)
