@@ -2,5 +2,5 @@ name: DocumentType Processor
 description: checking for document type
 implementation:
   container:
-    image: gcr.io/mlops-kubeflow-00/doctype_preprocessor:latest
+    image: gcr.io/mlops-kubeflow-00/docloader_connector:latest
     command: [python3, /pipelines/component/src/doctype_preprocessor.py]
