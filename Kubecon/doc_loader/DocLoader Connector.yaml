@@ -10,6 +10,6 @@ implementation:
     command: [
       python3, /pipelines/component/src/docloader.py,
       --data,                        {inputValue: data},
-      --outputdata,                      {outputPath: outputdata},
+      --outputdata,                      {inputValue: outputdata},
       --output_path_file,                      {outputPath: output_path_file}
     ]
