@@ -1,5 +1,7 @@
 name: DocumentType Processor
 description: checking for document type
+inputs:
+- {name: Input_data, type: GCSpath}
 implementation:
   container:
     image: gcr.io/mlops-kubeflow-00/doctype_processor:latest
