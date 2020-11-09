@@ -23,7 +23,7 @@ def doc_loader(argv=None):
   outputdata = pd.read_csv('https://raw.githubusercontent.com/AdeloreSimiloluwa/Kubecon/48f1681a89282870dfbdad926a3210877e22d1a8/Kubecon/data/outputdata.txt')
 
   Path(known_args.output_path_file).parent.mkdir(parents=True, exist_ok=True)
-  Path(known_args.output_path_file).write_text(known_args.output) 
+  Path(known_args.output_path_file).write_text(known_args.outputdata) 
   
   
 if __name__ == '__main__':
