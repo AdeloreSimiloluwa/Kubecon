@@ -3,7 +3,7 @@ outputs:
 - {name: Output, type: String}
 implementation:
   container:
-    image: python:3.7
+    image: gcr.io/mlops-kubeflow-00/documentai
     command:
     - python3
     - -u
